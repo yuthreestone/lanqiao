@@ -46,5 +46,20 @@ def checkAll(left,up,down):
             return False
     return True
 
-for i in range(1,num):
+count=0
+
+for left in range(1,num):
+    if not check(left):
+        continue
+    for down in range(1,10000):
+        if not check(down):
+            continue
+        up=(num-left)*down
+        if not check(up):
+            continue
+        if not checkAll(left,down,up):
+            continue
+        count+=1
+
+print(count)
     
