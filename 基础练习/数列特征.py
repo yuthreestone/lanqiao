@@ -1,0 +1,5 @@
+num=int(input().strip())
+list1=list(map(int,input().strip().split()))
+print(max(list1))
+print(min(list1))
+print(sum(list1))

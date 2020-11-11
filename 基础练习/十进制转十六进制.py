@@ -1,0 +1,17 @@
+num=int(input().strip())
+list1=[]
+if(num==0):
+    print(0)
+    exit()
+while(num>0):
+    remain=num%16
+    num=num//16
+    if(remain<10):
+        list1.append(remain)
+    else:
+        list1.append(chr(55+remain))
+i=len(list1)-1
+while(i>=0):
+    print(list1[i],end="")
+    i-=1
+print("")
