@@ -1,25 +1,11 @@
-def check(num):
-    str1=str(num)
-    if equal(str1,str1[::-1]):
+def rev(n):
+    a=str(n)
+    b=a[::-1]
+    if b==a:
         return True
     else:
         return False
 
-def equal(str1,str2):
-    if(len(str1)!=len(str2)):
-        return False
-    else:
-        i=0
-        while(i<len(str1)):
-            if(str1[i]!=str2[i]):
-                return False
-            i+=1
-        return True
-
-
-
-i=1000
-while(i<10000):
-    if(check(i)):
+for i in range(1000,10000):
+    if rev(i):
         print(i)
-    i+=1
